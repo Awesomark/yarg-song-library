@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>YARG Song Library</title><link rel="stylesheet" href="styles.css"><script defer src="app.js"></script></head><body><main>
+    <header>
+      <div>
+        <p class="eyebrow">YARG · SONG CATALOG</p>
+        <h1>Song Library</h1>
+        <p class="subtitle">A searchable catalog of songs currently available in the library.</p>
+      </div>
+      <div class="total"><strong id="total">3,457</strong><span>songs</span></div>
+    </header>
+
+    <section class="controls" aria-label="Library controls">
+      <label class="search"><span>Search</span><input id="search" type="search" placeholder="Song, artist, or album…" autofocus=""></label>
+      <label><span>Artist</span><select id="artist"></select></label>
+      <label><span>Album</span><select id="album"></select></label>
+    </section>
+
+    <div class="result-line"><span id="shown">Showing 3,457 of 3,457 songs</span><span id="updated">Updated October 30, 2026</span></div>
+    <section class="table-wrap">
+      <table>
+        <thead><tr>
+          <th><button data-sort="song" class="asc">Song</button></th>
+          <th><button data-sort="artist">Artist</button></th>
+          <th><button data-sort="artistCount">Artist Songs</button></th>
+          <th><button data-sort="album">Album</button></th>
+          <th><button data-sort="albumCount">Album Songs</button></th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </section>
+    <p id="error" class="error" hidden=""></p>
+  </main></body></html>
